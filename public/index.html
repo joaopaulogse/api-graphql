@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GraphQL</title>
+</head>
+<body style="background-color:black;">
+    <div align="center" style="color:white;">
+        <h3 id="text">
+        </h3>
+    </div>
+    <div id="graphql" align="center">
+
+        <iframe src="http://localhost:3000/graphiql" frameborder="0" 
+        width="100%" height="100%" 
+        scrolling="no"></iframe>
+    </div>
+    <script>
+        const graph = document.getElementById("graphql");
+        const text = document.getElementById("text")
+        text.innerHTML="API"
+        graph.style.borderStyle = "solid";
+        graph.style.borderColor = "gray";
+        graph.style.borderWidth = "2px";
+        graph.style.padding = "0px"
+        graph.style.margin = "0px"
+        graph.style.width = "auto"
+        graph.style.height = "850px"
+        // let idTime = setInterval(()=>{
+        //     text.innerHTML.split("").map((v, i)=>{
+        //         if(v == text.innerHTML){
+        //             text.innerHTML += v;
+        //         }
+                
+        //     })
+        // }, 100)
+        //     text.innerHTML = ""
+    </script>
+</body>
+</html>

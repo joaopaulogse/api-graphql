@@ -20,4 +20,6 @@ router.use(
   graphiqlExpress({ endpointURL: "/graphql" })
 );
 
+router.use(express.static("public"))
+
 module.exports = router;

@@ -7,7 +7,7 @@ const resolvers = require("./user.resolver");
 module.exports = makeExecutableSchema({
   logger: {
     log(e) {
-      createWriteStream("./error-graphql.log",{flags:"a"}).write("[GraphQL Log]:", e);
+      createWriteStream("./error-graphql.log",{flags:"a"}).write("[GraphQL Log]:", e.toString());
     }
   },
   typeDefs,
