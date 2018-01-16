@@ -37,6 +37,7 @@ Users.pre("save", next => {
       bcrypt.genSaltSync(SALT_WORK_FACTOR, null)
     );
   }
+  next();
 });
 
 // methods

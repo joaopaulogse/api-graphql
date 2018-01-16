@@ -9,16 +9,15 @@ const router = express.Router();
 router.use(
   "/graphql",
   bodyParser.json(),
-  graphqlHTTP({
+  graphqlExpress({
     schema: schema,
-    context: { models },
-    graphiql:true
+    context: { models }
   })
 );
 
-// router.use(
-//   "/graphiql",
-//   graphiqlExpress({ endpointURL: "/graphql" })
-// );
+router.use(
+  "/graphiql",
+  graphiqlExpress({ endpointURL: "/graphql" })
+);
 
 module.exports = router;

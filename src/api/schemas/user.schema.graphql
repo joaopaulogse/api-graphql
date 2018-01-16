@@ -1,0 +1,57 @@
+
+type User {
+    _id: String!
+    username: String
+    email: String
+    type: Type
+    createdAt: String
+}
+
+type Query {
+
+    """
+    Busca todos os Usuários
+    """
+    users: [User!]!
+}
+
+enum Type{
+    USUARIO
+    ADMIN
+}
+
+input UserInput {
+    username: String
+    password: String
+    email: String
+    type: Type
+}
+
+type Mutation {
+
+    """
+    Busca um único Usuário
+    """
+    getUser(_id: String!): User!
+
+
+    """
+    Cria um usuário
+    """
+    createUser(user: UserInput!): User!
+
+
+    """
+    Atualiza um Usuário
+    """
+    updateUser(_id: String!, user: UserInput!): User!
+
+    """
+    Deleta um Usuário
+    """
+    deleteUser(_id: String!): String!
+}
+schema {
+     query: Query
+     mutation: Mutation
+}
